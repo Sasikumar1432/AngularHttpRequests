@@ -1,0 +1,51 @@
+<div *ngIf="!error">
+  <h1>Effects in ngrx example</h1>
+  <div>
+    <table class="table table-bordered">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+      </tr>
+      <tbody>
+        <tr *ngFor="let u of uss">
+          <td>{{ u.name }}</td>
+          <td>{{ u.email }}</td>
+          <td>{{ u.phone }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div *ngIf="error" class="text-danger">Error while fetching the data</div>
+
+<hr />
+<hr />
+
+<div class="row mt-4">
+  <div class="col-2">UserName:</div>
+  <div class="col-4">
+    <input type="text" class="form-control" #name />
+  </div>
+  <div class="col-2">
+    <button class="btn btn-primary" (click)="editName(name)">Update</button>
+  </div>
+</div>
+<div class="row mt-4">
+  <div class="col-2">Email:</div>
+  <div class="col-4">
+    <input type="text" class="form-control" #email />
+  </div>
+  <div class="col-2">
+    <button class="btn btn-primary" (click)="editEmail(email)">Update</button>
+  </div>
+</div>
+<div class="row mt-4">
+  <div class="col-2">Mobile:</div>
+  <div class="col-4">
+    <input type="text" class="form-control" #mobile />
+  </div>
+  <div class="col-2">
+    <button class="btn btn-primary" (click)="editMobile(mobile)">Update</button>
+  </div>
+</div>
